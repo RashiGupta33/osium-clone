@@ -54,7 +54,7 @@ export default function Trusted() {
                 </h2>
 
                 <div
-                    className="mt-20 mb-20 overflow-hidden"
+                    className="mt-25 mb-20 overflow-hidden"
                     style={{
                         maskImage:
                             "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
