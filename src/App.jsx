@@ -4,6 +4,9 @@ import TrustedBy from './components/TrustedBy'
 import Benefits from './components/Benefits'
 import FeaturesHeading from './components/FeaturesHeading'
 import Testimonials from './components/Testimonials'
+import Container from './components/Container'
+import Support from './components/Support'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -15,6 +18,9 @@ function App() {
       <Benefits />
       <FeaturesHeading />
       <Testimonials />
+      <Container />
+      <Support />
+      <Footer />
     </>
   )
 }
