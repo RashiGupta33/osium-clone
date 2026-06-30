@@ -63,3 +63,22 @@ a {
 .animate-marquee {
   animation: marquee 50s linear infinite;
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 18px !important;
+  color: white;
+  font-weight: 700;
+}
+
+.swiper-button-disabled {
+  opacity: 0.35;
+}

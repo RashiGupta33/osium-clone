@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import TrustedBy from './components/TrustedBy'
 import Benefits from './components/Benefits'
 import FeaturesHeading from './components/FeaturesHeading'
+import Testimonials from './components/Testimonials'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <TrustedBy />
       <Benefits />
       <FeaturesHeading />
+      <Testimonials />
     </>
   )
 }
