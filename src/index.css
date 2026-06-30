@@ -66,8 +66,8 @@ a {
 
 .swiper-button-prev,
 .swiper-button-next {
-  width: 44px !important;
-  height: 44px !important;
+  width: 30px !important;
+  height: 30px !important;
   border-radius: 9999px;
   background: rgba(0, 0, 0, 0.18);
 }

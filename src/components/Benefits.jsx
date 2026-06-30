@@ -39,7 +39,7 @@ export default function Benefits() {
 
                 <div className="mx-auto max-w-[1200px] text-center">
 
-                    <h2 className="text-[40px] font-semibold leading-[1.1] tracking-[-2px] text-[#07328F]">
+                    <h2 className="text-[28px] md:text-[40px] font-semibold leading-[1.1] tracking-[-2px] text-[#07328F]">
                         Leverage our{" "}
                         <span className="text-[#6AB896]">
                             proprietary technology
@@ -51,7 +51,7 @@ export default function Benefits() {
                         </span>
                     </h2>
 
-                    <p className="mt-18 text-[30px] tracking-[-0.03em] text-[#07328F]">
+                    <p className="mt-6 md:mt-18 text-[20px] md:text-[30px] tracking-[-0.03em] text-[#07328F]">
                         Discover the{" "}
                         <span className="font-medium text-[#6AB896]">
                             benefits
@@ -61,7 +61,7 @@ export default function Benefits() {
 
                 </div>
 
-                <div className="mx-auto mt-20 max-w-[1200px] grid grid-cols-4 gap-6">
+                <div className="mx-auto mt-12 md:mt-20 max-w-[1200px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                     {benefits.map((item) => (
                         <BenefitCard key={item.title} {...item} />
                     ))}

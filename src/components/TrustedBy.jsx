@@ -48,7 +48,7 @@ export default function Trusted() {
     return (
         <section className="w-full bg-[#D3DBED4D] py-[60px]">
             <div className="mx-auto max-w-[1440px] px-8">
-                <h2 className="text-center text-[40px] font-semibold tracking-[-2px] text-[#07328F]">
+                <h2 className="text-center text-[24px] md:text-[40px] font-semibold tracking-[-2px] text-[#07328F]">
                     Trusted by 50+ materials and chemicals{" "}
                     <span className="text-[#6AB896]">innovators</span>
                 </h2>

@@ -12,11 +12,11 @@ const logos = [
 
 export default function SupportedBy() {
     return (
-        <section className="w-full bg-white py-24">
+        <section className="w-full bg-white py-24 -mb-4">
             <div className="mx-auto max-w-7xl px-6">
                 {/* Heading */}
 
-                <h2 className="mb-14 text-center text-[25px] font-semibold tracking-[-0.5px] text-[#9CD0B8]">
+                <h2 className="mb-14 -mt-15 text-center text-[30px] font-semibold tracking-[-0px] text-[#6AB896]">
                     We are supported by the best
                 </h2>
 

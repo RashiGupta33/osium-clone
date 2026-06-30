@@ -13,7 +13,7 @@ export default function FeaturesHeading() {
 
                     {/* Heading */}
                     <div className="mx-auto max-w-8xl text-center">
-                        <h2 className="text-[38px] font-semibold leading-[120%] tracking-[-1px] text-[#07328F]">
+                        <h2 className="text-[24px] md:text-[38px] font-semibold leading-[120%] tracking-[-1px] text-[#07328F]">
                             <span className="text-[#6AB896]">
                                 Get rid of trial-and-error
                             </span>{" "}
@@ -23,7 +23,7 @@ export default function FeaturesHeading() {
                             </span>
                         </h2>
 
-                        <p className="mt-12 text-[30px] leading-[135%] tracking-[-0.03em] text-[#07328F]">
+                        <p className="mt-6 md:mt-12 text-[18px] md:text-[30px] leading-[135%] tracking-[-0.03em] text-[#07328F]">
                             Benefit from a significant{" "}
                             <span className="font-medium text-[#6AB896]">
                                 R&amp;D competitive advantage
