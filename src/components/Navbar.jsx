@@ -6,63 +6,70 @@ export default function Navbar() {
 
     return (
         <header className="fixed top-0 left-0 z-50 w-full bg-white/95 backdrop-blur-md">
-            <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-
-                {/* Logo */}
+            <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-6 lg:h-25 lg:px-8">
                 <a href="/" className="flex items-center">
                     <img
                         src="https://framerusercontent.com/assets/FfTBt5ik0VlvbASgpapJSuuH8.png"
                         alt="Osium AI"
-                        className="h-10 w-auto"
+                        className="h-8 w-auto sm:h-10 lg:h-12 lg:-ml-3"
                     />
                 </a>
 
-                {/* Desktop Nav */}
-                <nav className="hidden md:flex items-center gap-6 text-[16px] font-medium text-[#07328F]">
-                    <a href="/our-solutions" className="hover:text-blue-500 transition">Solutions</a>
-                    <a href="/technology" className="hover:text-blue-500 transition">Technology</a>
+                <nav className="hidden items-center gap-6 text-[20px] font-medium text-[#07328F] transition lg:-ml-28 lg:flex">
+                    <a href="/our-solutions" className="hover:text-blue-500 transition">
+                        Solutions
+                    </a>
+
+                    <a href="/technology" className="hover:text-blue-500 transition">
+                        Technology
+                    </a>
+
                     <button className="flex items-center gap-1 hover:text-blue-500 transition">
-                        Company <ChevronDown size={14} />
+                        Company
+                        <ChevronDown size={16} strokeWidth={2} />
                     </button>
-                    <a href="/use-cases" className="hover:text-blue-500 transition">Use Cases</a>
+
+                    <a href="/use-cases" className="hover:text-blue-500 transition">
+                        Use Cases
+                    </a>
+
                     <button className="flex items-center gap-1 hover:text-blue-500 transition">
-                        Resources <ChevronDown size={14} />
+                        Resources
+                        <ChevronDown size={16} strokeWidth={2} />
                     </button>
                 </nav>
 
-                {/* Desktop CTA */}
                 <a
                     href="/request-a-demo"
-                    className="hidden md:inline-block rounded-lg bg-[#6AB896] px-4 py-2 text-white font-medium text-[16px] transition hover:bg-[#5ca484]"
+                    className="hidden rounded-lg bg-[#6AB896] px-5 py-2.5 text-[21px] font-medium text-white transition hover:bg-[#5ca484] lg:block"
                 >
                     Request a demo
                 </a>
 
-                {/* Mobile Hamburger */}
                 <button
-                    className="md:hidden text-[#07328F]"
+                    className="text-[#07328F] lg:hidden"
                     onClick={() => setOpen(!open)}
                     aria-label="Toggle menu"
                 >
-                    {open ? <X size={24} /> : <Menu size={24} />}
+                    {open ? <X size={26} /> : <Menu size={26} />}
                 </button>
-
             </div>
 
-            {/* Mobile Menu */}
             {open && (
-                <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 flex flex-col gap-4 text-[16px] font-medium text-[#07328F]">
-                    <a href="/our-solutions">Solutions</a>
-                    <a href="/technology">Technology</a>
-                    <a href="#">Company</a>
-                    <a href="/use-cases">Use Cases</a>
-                    <a href="#">Resources</a>
-                    <a
-                        href="/request-a-demo"
-                        className="mt-2 w-full text-center rounded-lg bg-[#6AB896] px-4 py-2 text-white font-medium"
-                    >
-                        Request a demo
-                    </a>
+                <div className="border-t border-gray-100 bg-white px-4 py-4 text-[16px] font-medium text-[#07328F] lg:hidden sm:px-6">
+                    <div className="flex flex-col gap-4">
+                        <a href="/our-solutions">Solutions</a>
+                        <a href="/technology">Technology</a>
+                        <a href="#">Company</a>
+                        <a href="/use-cases">Use Cases</a>
+                        <a href="#">Resources</a>
+                        <a
+                            href="/request-a-demo"
+                            className="mt-2 rounded-lg bg-[#6AB896] px-4 py-3 text-center font-medium text-white"
+                        >
+                            Request a demo
+                        </a>
+                    </div>
                 </div>
             )}
         </header>

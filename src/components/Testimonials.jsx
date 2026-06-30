@@ -73,36 +73,22 @@ export default function Testimonials() {
     ];
 
     return (
-        <section
-            id="testimonials"
-            className="w-full bg-white/30 py-20 mb-10"
-        >
-            <div className="mx-auto max-w-7xl px-6">
-
-                {/* Heading */}
-
-                <div className="mb-12 text-center">
-                    <h2 className="text-[24px] md:text-[38px] font-semibold leading-[110%] tracking-[0.3px] text-[#07328F]">
-                        Leverage Osium AI platform for many{" "}
-                        <span className="text-[#6AB896]">
-                            end uses
-                        </span>
+        <section id="testimonials" className="mb-10 w-full bg-white/30 py-16 sm:py-20">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6">
+                <div className="mb-10 text-center sm:mb-12">
+                    <h2 className="text-[24px] font-semibold leading-[1.1] tracking-[0.3px] text-[#07328F] md:text-[38px]">
+                        Leverage Osium AI platform for many <span className="text-[#6AB896]">end uses</span>
                     </h2>
                 </div>
 
-                {/* Slider */}
-
-                <div className="mt-19 relative px-22">
+                <div className="relative px-0 sm:px-10 lg:px-16">
                     <Swiper
                         modules={[Navigation]}
                         navigation
                         loop
                         spaceBetween={16}
-                        slidesPerView={2}
+                        slidesPerView={1}
                         breakpoints={{
-                            0: {
-                                slidesPerView: 1,
-                            },
                             768: {
                                 slidesPerView: 2,
                             },
@@ -111,30 +97,20 @@ export default function Testimonials() {
                         {cards.map((card) => (
                             <SwiperSlide key={card.title}>
                                 <div
-                                    className={`w-800px h-[300px] rounded-[15px] p-8 flex items-center gap-8
-                                    ${card.dark
-                                            ? "bg-[#07328F]"
-                                            : "bg-[#6AB896]"
-                                        }`}
+                                    className={`flex min-h-[260px] flex-col gap-6 rounded-[15px] p-6 sm:min-h-[300px] sm:flex-row sm:items-center sm:gap-8 sm:p-8 ${card.dark ? "bg-[#07328F]" : "bg-[#6AB896]"}`}
                                 >
                                     <img
                                         src={card.image}
                                         alt={card.title}
-                                        className="h-30 w-30 object-contain flex-shrink-0"
+                                        className="h-24 w-24 shrink-0 object-contain sm:h-30 sm:w-30"
                                     />
 
                                     <div>
-                                        <h3
-                                            className={`text-[30px] font-semibold leading-tight
-                                            ${card.dark ? "text-[#6AB896]" : "text-[#07328F]"}`}
-                                        >
+                                        <h3 className={`text-[24px] font-semibold leading-tight sm:text-[30px] ${card.dark ? "text-[#6AB896]" : "text-[#07328F]"}`}>
                                             {card.title}
                                         </h3>
 
-                                        <p
-                                            className={`mt-8 max-w-[260px] text-[18px] leading-7
-                                            ${card.dark ? "text-[#6AB896]" : "text-[#07328F]/80"}`}
-                                        >
+                                        <p className={`mt-4 max-w-[320px] text-[16px] leading-7 sm:mt-8 sm:text-[18px] ${card.dark ? "text-[#6AB896]" : "text-[#07328F]/80"}`}>
                                             {card.description}
                                         </p>
                                     </div>
@@ -143,7 +119,6 @@ export default function Testimonials() {
                         ))}
                     </Swiper>
                 </div>
-
             </div>
         </section>
     );

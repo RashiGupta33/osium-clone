@@ -5,154 +5,77 @@ import Process from "../assets/processes.avif";
 import Scaleup from "../assets/scale-up.avif";
 import Quality from "../assets/quality.avif";
 
+const cards = [
+    {
+        image: Properties,
+        alt: "Properties prediction",
+        title: "Properties prediction",
+        description: "Predict any material or chemical property in just a few seconds.",
+    },
+    {
+        image: Materials,
+        alt: "Materials design",
+        title: "Materials and chemicals design",
+        description: "Design the optimal route for your R&D experiments planning.",
+    },
+    {
+        image: Characterization,
+        alt: "Characterization",
+        title: "Characterization",
+        description: "Analyze your materials and chemicals characteristics and defects in just a few seconds.",
+    },
+    {
+        image: Process,
+        alt: "Process optimization",
+        title: "Processes optimization",
+        description: "Optimize your existing processes to decrease your costs, enhance your materials and chemicals properties and decrease your CO2 emissions.",
+    },
+    {
+        image: Scaleup,
+        alt: "Scale up",
+        title: "Scale-up plan",
+        description: "Move faster from the R&D experiments to manufacturing thanks to optimized scale-up plans.",
+    },
+    {
+        image: Quality,
+        alt: "Quality control",
+        title: "Quality control",
+        description: "Assess the quality and defects of your materials and chemicals at scale in just a few seconds.",
+    },
+];
+
 export default function FeaturesHeading() {
     return (
         <>
-            <section id="product" className="py-24 bg-[#D3DBED4D]">
-                <div className="mx-auto max-w-7xl px-6">
-
-                    {/* Heading */}
-                    <div className="mx-auto max-w-8xl text-center">
-                        <h2 className="text-[24px] md:text-[38px] font-semibold leading-[120%] tracking-[-1px] text-[#07328F]">
-                            <span className="text-[#6AB896]">
-                                Get rid of trial-and-error
-                            </span>{" "}
-                            approaches and unlock your R&amp;D's full potential with our{" "}
-                            <span className="text-[#6AB896]">
-                                cutting-edge functionalities
-                            </span>
+            <section id="product" className="bg-[#D3DBED4D] py-16 sm:py-24">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6">
+                    <div className="mx-auto max-w-6xl text-center">
+                        <h2 className="text-[24px] font-semibold leading-[1.2] tracking-[-1px] text-[#07328F] md:text-[38px]">
+                            <span className="text-[#6AB896]">Get rid of trial-and-error</span> approaches and unlock your R&amp;D&apos;s full potential with our <span className="text-[#6AB896]">cutting-edge functionalities</span>
                         </h2>
 
-                        <p className="mt-6 md:mt-12 text-[18px] md:text-[30px] leading-[135%] tracking-[-0.03em] text-[#07328F]">
-                            Benefit from a significant{" "}
-                            <span className="font-medium text-[#6AB896]">
-                                R&amp;D competitive advantage
-                            </span>{" "}
-                            thanks to our AI-powered software
+                        <p className="mt-6 text-[18px] leading-[1.35] tracking-[-0.02em] text-[#07328F] md:mt-10 md:text-[30px]">
+                            Benefit from a significant <span className="font-medium text-[#6AB896]">R&amp;D competitive advantage</span> thanks to our AI-powered software
                         </p>
                     </div>
-
                 </div>
             </section>
-            <section className="py-20 bg-[#D3DBED4D]">
-                <div className="mx-auto max-w-7xl px-2 -mt-20">
 
-                    {/* Top Row */}
-                    <div className="grid gap-10 md:grid-cols-3">
-
-                        {/* Card 1 */}
-                        <div className="rounded-3xl bg-white p-8 pb-25 pl-8 pr-6">
-                            <img
-                                src={Properties}
-                                alt="Properties prediction"
-                                className="h-20 w-20"
-                            />
-
-                            <h3 className="mt-12 text-[30px] font-bold text-[#6AB896]">
-                                Properties prediction
-                            </h3>
-
-                            <p className="mt-8 text-[18px] leading-[135%] text-[#07328F]/50">
-                                Predict any material or chemical property in just a few seconds.
-                            </p>
-                        </div>
-
-                        {/* Card 2 */}
-                        <div className="rounded-3xl bg-white p-8">
-                            <img
-                                src={Materials}
-                                alt="Materials design"
-                                className="h-20 w-20"
-                            />
-
-                            <h3 className="mt-11 text-[30px] font-bold text-[#6AB896]">
-                                Materials and chemicals design
-                            </h3>
-
-                            <p className="mt-2 text-[18px] leading-[135%] text-[#07328F]/50">
-                                Design the optimal route for your <br /> R&amp;D experiments planning.
-                            </p>
-                        </div>
-
-                        {/* Card 3 */}
-                        <div className="rounded-3xl bg-white p-8">
-                            <img
-                                src={Characterization}
-                                alt="Characterization"
-                                className="h-20 w-20"
-                            />
-
-                            <h3 className="mt-11 text-[30px] font-bold text-[#6AB896]">
-                                Characterization
-                            </h3>
-
-                            <p className="mt-10 text-[18px] leading-[135%] text-[#07328F]/50">
-                                Analyze your materials and <br /> chemicals characteristics and defects <br /> in just a
-                                few seconds.
-                            </p>
-                        </div>
-
+            <section className="bg-[#D3DBED4D] pb-16 sm:pb-20">
+                <div className="mx-auto -mt-6 max-w-7xl px-4 sm:-mt-10 sm:px-6 lg:-mt-14">
+                    <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                        {cards.map((card) => (
+                            <div key={card.title} className="rounded-3xl bg-white p-6 sm:p-8">
+                                <img src={card.image} alt={card.alt} className="h-16 w-16 sm:h-20 sm:w-20" />
+                                <h3 className="mt-8 text-[24px] font-bold leading-tight text-[#6AB896] sm:text-[30px]">
+                                    {card.title}
+                                </h3>
+                                <p className="mt-4 text-[16px] leading-[1.5] text-[#07328F]/60 sm:text-[18px]">
+                                    {card.description}
+                                </p>
+                            </div>
+                        ))}
                     </div>
-
-                    {/* Bottom Row */}
-                    <div className="mt-12 grid gap-10 md:grid-cols-3">
-
-                        {/* Card 4 */}
-                        <div className="rounded-3xl bg-white p-8 pb-24 pl-8 pr-6">
-                            <img
-                                src={Process}
-                                alt="Process optimization"
-                                className="h-20 w-20"
-                            />
-
-                            <h3 className="mt-11 text-[30px] font-bold text-[#6AB896]">
-                                Processes optimization
-                            </h3>
-
-                            <p className="mt-2 text-[18px] leading-[135%] text-[#07328F]/50">
-                                Optimize your existing processes to decrease your costs, enhance your
-                                materials and chemicals properties and decrease your CO₂ emissions.
-                            </p>
-                        </div>
-
-                        {/* Card 5 */}
-                        <div className="rounded-3xl bg-white p-8">
-                            <img
-                                src={Scaleup}
-                                alt="Scale up"
-                                className="h-20 w-20"
-                            />
-
-                            <h3 className="mt-11 text-[30px] font-bold text-[#6AB896]">
-                                Scale-up plan
-                            </h3>
-
-                            <p className="mt-4 text-[15px] leading-[135%] text-[#07328F]/50">
-                                Move faster from the R&amp;D experiments to manufacturing thanks to optimized
-                                scale-up plans.
-                            </p>
-                        </div>
-
-                        {/* Card 6 */}
-                        <div className="rounded-3xl bg-white p-8">
-                            <img
-                                src={Quality}
-                                alt="Quality control"
-                                className="h-20 w-20"
-                            />
-
-                            <h3 className="mt-11 text-[30px] font-bold text-[#6AB896]">
-                                Quality control
-                            </h3>
-
-                            <p className="mt-4 text-[15px] leading-[135%] text-[#07328F]/50">
-                                Assess the quality and defects of your materials and chemicals at scale in
-                                just a few seconds.
-                            </p>
-                        </div>
-
-                    </div>
-
                 </div>
             </section>
         </>

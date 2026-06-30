@@ -21,40 +21,39 @@ import Urgo from "../assets/urgo.avif";
 import CNRS from "../assets/cnrs.avif";
 
 const logos = [
-    { src: CNRS, alt: "CNRS", width: "w-[50px]", fit: "cover" },
-    { src: H545, alt: "5H45", width: "w-[70px]", fit: "cover" },
-    { src: Aperam, alt: "Aperam", width: "w-[136px]", fit: "cover" },
-    { src: Safran, alt: "Safran", width: "w-[187px]", fit: "cover" },
-    { src: Decathlon, alt: "Decathlon", width: "w-[218px]", fit: "cover" },
-    { src: Cemef, alt: "Cemef", width: "w-[84px]", fit: "contain" },
-    { src: Stan, alt: "Stanford", width: "w-[149px]", fit: "cover" },
-    { src: Filab, alt: "Filab", width: "w-[126px]", fit: "cover" },
-    { src: LVMH, alt: "LVMH", width: "w-[120px]", fit: "cover" },
-    { src: Fluro, alt: "Fluorotechnique", width: "w-[244px]", fit: "cover" },
-    { src: Sorbonne, alt: "Sorbonne", width: "w-[165px]", fit: "cover" },
-    { src: VNComposites, alt: "VN Composites", width: "w-[185px]", fit: "cover" },
-    { src: Colas, alt: "Colas", width: "w-[130px]", fit: "cover" },
-    { src: Maes, alt: "Maestria", width: "w-[206px]", fit: "cover" },
-    { src: PSL, alt: "PSL", width: "w-[109px]", fit: "contain" },
-    { src: Resicare, alt: "Resicare", width: "w-[72px]", fit: "cover" },
-    { src: Airbus, alt: "Airbus", width: "w-[173px]", fit: "cover" },
-    { src: Israel, alt: "Technion", width: "w-[120px]", fit: "cover" },
-    { src: Expiris, alt: "Expiris", width: "w-[110px]", fit: "cover" },
-    { src: Atem, alt: "ATEM", width: "w-[159px]", fit: "cover" },
-    { src: Urgo, alt: "Urgo", width: "w-[167px]", fit: "cover" },
+    { src: CNRS, alt: "CNRS" },
+    { src: H545, alt: "5H45" },
+    { src: Aperam, alt: "Aperam" },
+    { src: Safran, alt: "Safran" },
+    { src: Decathlon, alt: "Decathlon" },
+    { src: Cemef, alt: "Cemef" },
+    { src: Stan, alt: "Stanford" },
+    { src: Filab, alt: "Filab" },
+    { src: LVMH, alt: "LVMH" },
+    { src: Fluro, alt: "Fluorotechnique" },
+    { src: Sorbonne, alt: "Sorbonne" },
+    { src: VNComposites, alt: "VN Composites" },
+    { src: Colas, alt: "Colas" },
+    { src: Maes, alt: "Maestria" },
+    { src: PSL, alt: "PSL" },
+    { src: Resicare, alt: "Resicare" },
+    { src: Airbus, alt: "Airbus" },
+    { src: Israel, alt: "Technion" },
+    { src: Expiris, alt: "Expiris" },
+    { src: Atem, alt: "ATEM" },
+    { src: Urgo, alt: "Urgo" },
 ];
 
 export default function Trusted() {
     return (
-        <section className="w-full bg-[#D3DBED4D] py-[60px]">
-            <div className="mx-auto max-w-[1440px] px-8">
-                <h2 className="text-center text-[24px] md:text-[40px] font-semibold tracking-[-2px] text-[#07328F]">
-                    Trusted by 50+ materials and chemicals{" "}
-                    <span className="text-[#6AB896]">innovators</span>
+        <section className="w-full bg-[#D3DBED4D] py-14 sm:py-[60px]">
+            <div className="mx-auto max-w-[1440px] px-4 sm:px-8">
+                <h2 className="text-center text-[24px] font-semibold tracking-[-1px] text-[#07328F] md:text-[40px] md:tracking-[-2px]">
+                    Trusted by 50+ materials and chemicals <span className="text-[#6AB896]">innovators</span>
                 </h2>
 
                 <div
-                    className="mt-25 mb-20 overflow-hidden"
+                    className="mt-12 mb-8 overflow-hidden sm:mt-16 sm:mb-12"
                     style={{
                         maskImage:
                             "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
@@ -62,13 +61,13 @@ export default function Trusted() {
                             "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
                     }}
                 >
-                    <div className="flex min-w-max items-center gap-30 animate-marquee">
+                    <div className="animate-marquee flex min-w-max items-center gap-12 sm:gap-20 lg:gap-30">
                         {[...logos, ...logos].map((logo, index) => (
                             <img
                                 key={index}
                                 src={logo.src}
                                 alt={logo.alt}
-                                className={`h-17 shrink-0 object-cover`}
+                                className="h-10 shrink-0 object-contain sm:h-12 md:h-14 lg:h-17"
                             />
                         ))}
                     </div>

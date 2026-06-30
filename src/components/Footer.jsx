@@ -1,4 +1,4 @@
-export default function Footer() {
+export default function Contact() {
     const footerLinks = {
         Solutions: [
             { label: "Our offer", href: "#" },
@@ -20,21 +20,21 @@ export default function Footer() {
 
     return (
         <footer className="w-full bg-[#153d99] text-white">
-            <div className="mx-auto max-w-[1460px] px-8 pt-[38px] pb-[38px] sm:px-12 lg:px-[74px]">
-                <div className="flex flex-col gap-14 lg:flex-row lg:items-start lg:justify-between">
-                    <div className="grid grid-cols-2 gap-x-10 gap-y-10 sm:grid-cols-4 lg:gap-x-[88px]">
+            <div className="mx-auto max-w-[1460px] px-5 pt-10 pb-8 sm:px-6 lg:px-[74px]">
+                <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
+                    <div className="grid grid-cols-2 gap-x-8 gap-y-8 self-start sm:grid-cols-4 lg:gap-x-16">
                         {Object.entries(footerLinks).map(([title, links]) => (
-                            <div key={title} className="min-w-[160px]">
-                                <h3 className="mb-[10px] text-[19px] font-normal leading-none tracking-[-0.3px]">
+                            <div key={title} className="min-w-0">
+                                <h3 className="mb-2 text-[18px] font-normal leading-none sm:text-[19px]">
                                     {title}
                                 </h3>
 
-                                <div className="space-y-[6px]">
+                                <div className="space-y-1">
                                     {links.map((link) => (
                                         <a
                                             key={link.label}
                                             href={link.href}
-                                            className="block text-[14px] font-normal leading-[1.8] text-white transition hover:text-white/85"
+                                            className="block text-[14px] leading-[1.8] text-white transition hover:text-white/85"
                                         >
                                             {link.label}
                                         </a>
@@ -44,7 +44,7 @@ export default function Footer() {
                         ))}
                     </div>
 
-                    <div className="flex flex-col items-start gap-10 self-start lg:min-w-[535px] lg:flex-row lg:items-start lg:justify-end lg:gap-[112px]">
+                    <div className="flex w-full flex-col items-start gap-6 sm:w-auto sm:items-center lg:min-w-[360px] lg:flex-row lg:items-start lg:justify-end lg:gap-12">
                         <a
                             href="#"
                             target="_blank"
@@ -62,36 +62,30 @@ export default function Footer() {
                             </svg>
                         </a>
 
-                        <button className="h-[45px] min-w-[250px] rounded-[11px] bg-[#78c8a2] px-[24px] text-[25px] font-normal tracking-[-0.4px] text-white transition hover:opacity-90">
+                        <button className="h-[45px] w-full max-w-[240px] rounded-[11px] bg-[#78c8a2] px-6 text-[18px] font-normal text-white transition hover:opacity-90 sm:min-w-[250px] sm:max-w-none sm:text-[22px]">
                             Request a demo
                         </button>
                     </div>
                 </div>
 
-                <div className="mt-[34px] flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-                    <div className="flex flex-col gap-8 sm:flex-row sm:items-center sm:gap-14 lg:gap-[96px]">
+                <div className="mt-10 flex flex-col items-center gap-5 border-t border-white/10 pt-6 text-center lg:flex-row lg:items-center lg:justify-between lg:text-left">
+                    <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:gap-10 lg:items-center">
                         <img
                             src="https://framerusercontent.com/images/2lFE5P6AYniOZfbL5kPTyBp7bG4.png"
                             alt="Osium"
-                            className="ml-3 h-[48px] w-auto"
+                            className="h-[34px] w-auto sm:h-[42px] lg:h-[48px]"
                         />
 
                         <a
                             href="#"
-                            className="text-[14px] -ml-8 font-normal text-white transition hover:text-white/85"
+                            className="text-[14px] font-normal text-white transition hover:text-white/85"
                         >
                             Privacy Policy
                         </a>
-
-                        {/* <img
-                            src="https://framerusercontent.com/images/uTHc6UyFc8yDpgHXPRLbPTyU7y4.png"
-                            alt="SOC 2 Type 2"
-                            className="h-[78px] w-auto"
-                        /> */}
                     </div>
 
-                    <p className="whitespace-nowrap text-[11px] font-normal text-white">
-                        ï¿½ 2024, Osium. Copyrights, All Rights Reserved.
+                    <p className="max-w-[220px] text-[10px] font-normal leading-[1.5] text-white sm:max-w-none sm:text-[12px] lg:text-right">
+                        © 2024, Osium. Copyrights, All Rights Reserved.
                     </p>
                 </div>
             </div>

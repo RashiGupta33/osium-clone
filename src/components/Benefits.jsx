@@ -34,39 +34,23 @@ const benefits = [
 
 export default function Benefits() {
     return (
-        <section className="bg-white py-20">
-            <div className="mx-auto max-w-[1400px] px-6">
-
+        <section className="bg-white py-16 sm:py-20">
+            <div className="mx-auto max-w-[1400px] px-4 sm:px-6">
                 <div className="mx-auto max-w-[1200px] text-center">
-
-                    <h2 className="text-[28px] md:text-[40px] font-semibold leading-[1.1] tracking-[-2px] text-[#07328F]">
-                        Leverage our{" "}
-                        <span className="text-[#6AB896]">
-                            proprietary technology
-                        </span>{" "}
-                        developed by experts with 10 years of experience in AI
-                        and authors of{" "}
-                        <span className="text-[#6AB896]">
-                            multiple AI patents
-                        </span>
+                    <h2 className="text-[28px] font-semibold leading-[1.15] tracking-[-1px] text-[#07328F] md:text-[40px] md:tracking-[-2px]">
+                        Leverage our <span className="text-[#6AB896]">proprietary technology</span> developed by experts with 10 years of experience in AI and authors of <span className="text-[#6AB896]">multiple AI patents</span>
                     </h2>
 
-                    <p className="mt-6 md:mt-18 text-[20px] md:text-[30px] tracking-[-0.03em] text-[#07328F]">
-                        Discover the{" "}
-                        <span className="font-medium text-[#6AB896]">
-                            benefits
-                        </span>{" "}
-                        of our solution
+                    <p className="mt-6 text-[18px] tracking-[-0.02em] text-[#07328F] md:mt-12 md:text-[30px]">
+                        Discover the <span className="font-medium text-[#6AB896]">benefits</span> of our solution
                     </p>
-
                 </div>
 
-                <div className="mx-auto mt-12 md:mt-20 max-w-[1200px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <div className="mx-auto mt-10 grid max-w-[1200px] grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4 md:mt-16">
                     {benefits.map((item) => (
                         <BenefitCard key={item.title} {...item} />
                     ))}
                 </div>
-
             </div>
         </section>
     );
