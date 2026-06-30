@@ -70,7 +70,7 @@ export default function FeaturesHeading() {
                                 <h3 className="mt-8 text-[24px] font-bold leading-tight text-[#6AB896] sm:text-[30px]">
                                     {card.title}
                                 </h3>
-                                <p className="mt-4 text-[16px] leading-[1.5] text-[#07328F]/60 sm:text-[18px]">
+                                <p className="mt-4 text-[16px] leading-normal text-[#07328F]/60 sm:text-[18px]">
                                     {card.description}
                                 </p>
                             </div>
