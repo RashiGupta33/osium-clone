@@ -2,6 +2,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import TrustedBy from './components/TrustedBy'
 import Benefits from './components/Benefits'
+import FeaturesHeading from './components/FeaturesHeading'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <Hero />
       <TrustedBy />
       <Benefits />
+      <FeaturesHeading />
     </>
   )
 }
